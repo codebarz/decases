@@ -6,3 +6,6 @@ test('Add 6 to 4 should return 10', () => {
 test('Empty argument should return error', () => {
    expect(functions.add()).toBe('Arguments must not be empty');
 });
+test('Should return error if either is string', () => {
+    expect(functions.add("Hello", "2")).toBe("Both arguments must be an Integer");
+});
