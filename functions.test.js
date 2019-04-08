@@ -27,3 +27,6 @@ test('If either arguments are string', () => {
 test('Multiply 6, 4, 5 and 10 should return 1200', () => {
     expect(functions.multiply(6,4,5,10)).toBe(1200);
 });
+test('Empty argument should return an error', () => {
+    expect(functions.multiply()).toBe('Arguments must not be empty');
+});
