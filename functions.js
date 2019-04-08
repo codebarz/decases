@@ -16,7 +16,8 @@ const functions = {
             result += a[i];
         }
         return result;
-    }, difference: (a,b) => {
+    },
+    difference: (a,b) => {
         if(!a || !b) {
             return `Arguments must not be empty`;
         }
