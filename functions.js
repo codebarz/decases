@@ -9,6 +9,13 @@ const functions = {
      else {
          return a + b;
      }
+    },
+    indefiniteAdd: (...a) => {
+        let result = 0;
+        for(let i in a) {
+            result += a[i];
+        }
+        return result;
     }
 };
 
