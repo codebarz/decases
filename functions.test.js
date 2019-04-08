@@ -18,3 +18,9 @@ test('Empty argument should return error', () => {
 test('Difference of 5 and 2 should be 3', () => {
     expect(functions.difference(5,2)).toBe(3);
 });
+test('If either arguments are empty', () => {
+    expect(functions.difference()).toBe('Arguments must not be empty');
+});
+test('If either arguments are string', () => {
+    expect(functions.difference("Hello", "World")).toBe("Both arguments must be an Integer");
+});
