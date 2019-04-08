@@ -15,3 +15,6 @@ test('Add 6, 4, 5 and 10 should return 25', () => {
 test('Empty argument should return error', () => {
     expect(functions.indefiniteAdd()).toBe('Arguments must not be empty');
 });
+test('Difference of 5 and 2 should be 3', () => {
+    expect(functions.difference(5,2)).toBe(3);
+});
