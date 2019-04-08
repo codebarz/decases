@@ -27,7 +27,15 @@ const functions = {
         else {
             return a - b;
         }
-    }
+    },
+    multiply: (...a) => {
+        let result = 1;
+        for(let i in a) {
+            result *= a[i];
+        }
+        return result;
+    },
+    divide: (a,b) => a / b
 };
 
 module.exports = functions;

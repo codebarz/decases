@@ -13,7 +13,7 @@ test('Add 6, 4, 5 and 10 should return 25', () => {
     expect(functions.indefiniteAdd(6,4,5,10)).toBe(25);
 });
 test('Empty argument should return error', () => {
-    expect(functions.indefiniteAdd()).toBe('Arguments must not be empty');
+    expect(functions.indefiniteAdd()).toBe(0);
 });
 test('Difference of 5 and 2 should be 3', () => {
     expect(functions.difference(5,2)).toBe(3);
@@ -27,6 +27,6 @@ test('If either arguments are string', () => {
 test('Multiply 6, 4, 5 and 10 should return 1200', () => {
     expect(functions.multiply(6,4,5,10)).toBe(1200);
 });
-test('Empty argument should return an error', () => {
-    expect(functions.multiply()).toBe('Arguments must not be empty');
+test('Divide 10 by 5 should return 2', () => {
+    expect(functions.divide(10,5)).toBe(2);
 });
