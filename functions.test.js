@@ -9,3 +9,9 @@ test('Empty argument should return error', () => {
 test('Should return error if either is string', () => {
     expect(functions.add("Hello", "2")).toBe("Both arguments must be an Integer");
 });
+test('Add 6, 4, 5 and 10 should return 25', () => {
+    expect(functions.indefiniteAdd(6,4,5,10)).toBe(25);
+});
+test('Empty argument should return error', () => {
+    expect(functions.indefiniteAdd()).toBe('Arguments must not be empty');
+});

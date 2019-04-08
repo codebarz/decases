@@ -3,7 +3,7 @@ const functions = {
      if(!a || !b) {
          return `Arguments must not be empty`;
      }
-     else if(typeof a === "string" || typeof b === "string") {
+     else if(typeof a !== "number" || typeof b !== "number") {
          return "Both arguments must be an Integer";
      }
      else {
