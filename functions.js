@@ -36,7 +36,22 @@ const functions = {
         }
         return result;
     },
-    divide: (a,b) => a / b
+    divide: (a,b) => a / b,
+    getUserRepo: (username) => {
+        const url = `https://api.github.com/users/${username}/repos`;
+        console.log(url);
+        axios.get(url)
+            .then(function (response) {
+                let result = [];
+                for (let i of response.data) {
+                    result.push(i.name);
+                }
+                return result;
+            })
+            .catch(function (error) {
+                return error;
+            })
+    }
 };
 
 module.exports = functions;
