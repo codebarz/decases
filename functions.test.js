@@ -30,7 +30,12 @@ test('Multiply 6, 4, 5 and 10 should return 1200', () => {
 test('Divide 10 by 5 should return 2', () => {
     expect(functions.divide(10,5)).toBe(2);
 });
-test('Strings concatenate', () => {
-    expect(functions.concatStrings('Hello', 'World')).toBe('Hello World');
+describe('test for concarenating two string', () => {
+    test('Strings concatenate', () => {
+        expect(functions.concatStrings('Hello', 'World')).toBe('Hello World');
+    });
+    test('Empty arguments should return an error', () => {
+        expect(functions.concatStrings()).toBe('Parameters must not be empty');
+    });
 });
 
