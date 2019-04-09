@@ -40,8 +40,5 @@ describe('test for concatenating two string', () => {
     test('Arguments must not be integers', () => {
         expect(functions.concatStrings(1,1)).toBe('Arguments must be strings');
     });
-    test('Number of arguments must be two', () => {
-        expect(functions.concatStrings(1,2,3)).toBe('Arguments can not be more than two');
-    })
 });
 
