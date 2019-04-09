@@ -42,6 +42,9 @@ const functions = {
         if(!a || !b) {
             return `Parameters must not be empty`;
         }
+        else if(typeof a === "number" || typeof b === "number") {
+            return `Arguments must be strings`;
+        }
         else {
             return `${a} ${b}`;
         }
