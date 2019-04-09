@@ -37,7 +37,10 @@ const functions = {
         }
         return result;
     },
-    divide: (a,b) => a / b
+    divide: (a,b) => a / b,
+    concatStrings: (a,b) => {
+        return `${a} ${b}`;
+    }
 
 };
 
