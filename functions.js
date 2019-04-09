@@ -39,7 +39,12 @@ const functions = {
     },
     divide: (a,b) => a / b,
     concatStrings: (a,b) => {
-        return `${a} ${b}`;
+        if(!a || !b) {
+            return `Parameters must not be empty`;
+        }
+        else {
+            return `${a} ${b}`;
+        }
     }
 
 };
