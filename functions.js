@@ -1,4 +1,5 @@
 const axios = require('axios');
+const ajax = require('ajax');
 const functions = {
     add: (a, b) => {
      if(!a || !b) {
@@ -36,22 +37,8 @@ const functions = {
         }
         return result;
     },
-    divide: (a,b) => a / b,
-    getUserRepo: (username) => {
-        const url = `https://api.github.com/users/${username}/repos`;
-        console.log(url);
-        axios.get(url)
-            .then(function (response) {
-                let result = [];
-                for (let i of response.data) {
-                    result.push(i.name);
-                }
-                return result;
-            })
-            .catch(function (error) {
-                return error;
-            })
-    }
+    divide: (a,b) => a / b
+
 };
 
 module.exports = functions;
