@@ -1,5 +1,5 @@
 const axios = require('axios');
-//const mock = require('__mocks__/repos');
+const mockAxios = require('./__mocks__/repos');
 const functions = {
     add: (a, b) => {
      if(!a || !b) {
@@ -44,24 +44,19 @@ const functions = {
     },
     divide: (a,b) => a / b,
     getUserRepo: async (username) => {
-        const url = `https://api.github.com/users/${username}/repos`;
-        const mockUrl = `http://localhost:3000/data?username=${username}`;
-        let result = [];
-        await axios.get(url)
-            .then(function (response) {
-                response.data.forEach(value => result.push(value.name));
-                return result;
-            })
-            .catch(function (error) {
-                return error;
-            });
-        if(result.length > 0) {
+    const url = `https://api.github.com/users/${username}/repos`;
+    let result = [];
+    await mockAxios.get(url)
+        .then(function (response) {
+            response.data.forEach(value => result.push(value.name));
             return result;
-        }
-        else {
-            return 'This user doesn\'t have any repo';
-        }
-    },
+        })
+        .catch(function (error) {
+            return error;
+        });
+        console.log(result);
+        return result;
+},
     concatStrings: (a,b) => {
         if(!a || !b) {
             return `Parameters must not be empty`;
