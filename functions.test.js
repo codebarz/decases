@@ -48,10 +48,10 @@ describe('Check repos from git api', () => {
                 expect(response).toEqual(['57', 'decafreelance', 'decases', 'eexport', 'exportchat', 'flisch', 'gitprac', 'itravelcentral', 'pollark', 'portfolio', 'startereit', 'talkative', 'team-portfolio', 'YorubaIndigenous']);  // Success!
             })
     });
-    test('Should return an error if user doesn\'t exist', async () => {
+    test('Should return an error if user doesn\'t have a repo', async () => {
         await functions.getUserRepo('whiteho')
             .then(response => {
-                expect(response).toEqual([]);
+                expect(response).toBe('This user doesn\'t have any repo');
             })
     });
 });
