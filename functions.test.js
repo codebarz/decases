@@ -29,6 +29,9 @@ describe('Shoul show the difference between two numbers', () => {
     test('If either arguments are string', () => {
         expect(functions.difference("Hello", "World")).toBe("Both arguments must be an Integer");
     });
+    test('If first argument is less than the second', () => {
+       expect(functions.difference(5, 10)).toBe(-5);
+    });
 });
 test('Multiply 6, 4, 5 and 10 should return 1200', () => {
     expect(functions.multiply(6,4,5,10)).toBe(1200);
