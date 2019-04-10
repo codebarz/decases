@@ -38,6 +38,20 @@ const functions = {
         return result;
     },
     divide: (a,b) => a / b,
+    getUserRepo: async (username) => {
+        const url = `https://api.github.com/users/${username}/repos`;
+        console.log(url);
+        let result = [];
+        await axios.get(url)
+            .then(function (response) {
+                response.data.forEach(value => result.push(value.name));
+                return result;
+            })
+            .catch(function (error) {
+                return error;
+            });
+        return result;
+    },
     concatStrings: (a,b) => {
         if(!a || !b) {
             return `Parameters must not be empty`;
