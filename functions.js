@@ -45,7 +45,7 @@ const functions = {
     divide: (a,b) => a / b,
     getUserRepo: async (username) => {
         const url = `https://api.github.com/users/${username}/repos`;
-        console.log(url);
+        const mockUrl = `http://localhost:3000/data?username=${username}`;
         let result = [];
         await axios.get(url)
             .then(function (response) {
@@ -75,5 +75,5 @@ const functions = {
     }
 
 };
-
+functions.getUserRepo("whitehox");
 module.exports = functions;
