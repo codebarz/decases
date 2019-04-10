@@ -59,7 +59,7 @@ describe('Check repos from git api', () => {
     test('Should return user repos', async () => {
         await functions.getUserRepo('whitehox')
             .then(response => {
-                expect(response).toEqual(['57', 'decafreelance', 'decases', 'eexport', 'exportchat', 'flisch', 'gitprac', 'itravelcentral', 'pollark', 'portfolio', 'startereit', 'talkative', 'team-portfolio', 'YorubaIndigenous']);  // Success!
+                expect(response).toEqual(['57', 'decafreelance', 'decases', 'eexport', 'exportchat', 'flisch', 'gitprac', 'itravelcentral', 'pollark', 'portfolio', 'startereit', 'talkative', 'team-portfolio', 'YorubaIndigenous']);
             })
     });
     test('Should return an error if user doesn\'t have a repo', async () => {

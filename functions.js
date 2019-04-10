@@ -1,5 +1,5 @@
 const axios = require('axios');
-const ajax = require('ajax');
+const mock = require('__mocks__/repos');
 const functions = {
     add: (a, b) => {
      if(!a || !b) {
