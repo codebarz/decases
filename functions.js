@@ -33,7 +33,12 @@ const functions = {
     multiply: (...a) => {
         let result = 1;
         for(let i in a) {
-            result *= a[i];
+            if(typeof a[i] === 'string') {
+                result = 'All arguments must be integers';
+            }
+            else {
+                result *= a[i];
+            }
         }
         return result;
     },
