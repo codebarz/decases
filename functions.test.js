@@ -19,14 +19,16 @@ describe('Should add indefinte amount of numbers', () => {
         expect(functions.indefiniteAdd()).toBe(0);
     });
 });
-test('Difference of 5 and 2 should be 3', () => {
-    expect(functions.difference(5,2)).toBe(3);
-});
-test('If either arguments are empty', () => {
-    expect(functions.difference()).toBe('Arguments must not be empty');
-});
-test('If either arguments are string', () => {
-    expect(functions.difference("Hello", "World")).toBe("Both arguments must be an Integer");
+describe('Shoul show the difference between two numbers', () => {
+    test('Difference of 5 and 2 should be 3', () => {
+        expect(functions.difference(5,2)).toBe(3);
+    });
+    test('If either arguments are empty', () => {
+        expect(functions.difference()).toBe('Arguments must not be empty');
+    });
+    test('If either arguments are string', () => {
+        expect(functions.difference("Hello", "World")).toBe("Both arguments must be an Integer");
+    });
 });
 test('Multiply 6, 4, 5 and 10 should return 1200', () => {
     expect(functions.multiply(6,4,5,10)).toBe(1200);
