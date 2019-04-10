@@ -60,7 +60,7 @@ describe('Check repos from git api', () => {
     test('Should return user repos', async () => {
         await functions.getUserRepo('whitehox')
             .then(response => {
-                expect(response).toContain(('57', 'decafreelance'));
+                expect(response).toContain(('57'));
             })
     });
     // test('Should return user repos', async () => {

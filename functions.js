@@ -1,5 +1,5 @@
 const axios = require('axios');
-const mockAxios = require('./__mocks__/repos');
+//const mockAxios = require('./__mocks__/axios');
 const functions = {
     add: (a, b) => {
      if(!a || !b) {
@@ -46,7 +46,7 @@ const functions = {
     getUserRepo: async (username) => {
     const url = `https://api.github.com/users/${username}/repos`;
     let result = [];
-    await mockAxios.get(url)
+    await axios.get(url)
         .then(function (response) {
             response.data.forEach(value => result.push(value.name));
             return result;
@@ -54,7 +54,6 @@ const functions = {
         .catch(function (error) {
             return error;
         });
-        console.log(result);
         return result;
 },
     concatStrings: (a,b) => {
