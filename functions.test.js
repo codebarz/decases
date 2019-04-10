@@ -1,4 +1,5 @@
 const functions = require('./functions');
+const mockDb = require('__mocks__/repos');
 
 describe('Should check for addition of integers', () => {
     test('Add 6 to 4 should return 10', () => {
