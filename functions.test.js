@@ -33,8 +33,16 @@ describe('Shoul show the difference between two numbers', () => {
        expect(functions.difference(5, 10)).toBe(-5);
     });
 });
-test('Multiply 6, 4, 5 and 10 should return 1200', () => {
-    expect(functions.multiply(6,4,5,10)).toBe(1200);
+describe('Should multiply indefinite amount of integers', () => {
+    test('Multiply 6, 4, 5 and 10 should return 1200', () => {
+        expect(functions.multiply(6,4,5,10)).toBe(1200);
+    });
+    test('Should return error if either of the arguments are strings', () => {
+        expect(functions.multiply(1,2,3, 'String')).toBe('All arguments must be integers');
+    });
+    test('Should return an error if there are no arguments', () => {
+        expect(functions.multiply()).toBe('You need to enter an argument');
+    });
 });
 test('Divide 10 by 5 should return 2', () => {
     expect(functions.divide(10,5)).toBe(2);
