@@ -11,11 +11,13 @@ describe('Should check for addition of integers', () => {
         expect(functions.add("Hello", "2")).toBe("Both arguments must be an Integer");
     });
 });
-test('Add 6, 4, 5 and 10 should return 25', () => {
-    expect(functions.indefiniteAdd(6,4,5,10)).toBe(25);
-});
-test('Empty argument should return error', () => {
-    expect(functions.indefiniteAdd()).toBe(0);
+describe('Should add indefinte amount of numbers', () => {
+    test('Add 6, 4, 5 and 10 should return 25', () => {
+        expect(functions.indefiniteAdd(6,4,5,10)).toBe(25);
+    });
+    test('Empty argument should return error', () => {
+        expect(functions.indefiniteAdd()).toBe(0);
+    });
 });
 test('Difference of 5 and 2 should be 3', () => {
     expect(functions.difference(5,2)).toBe(3);
