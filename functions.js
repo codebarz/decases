@@ -40,7 +40,7 @@ const functions = {
                 result *= a[i];
             }
         }
-        return result;
+            return result;
     },
     divide: (a,b) => a / b,
     getUserRepo: async (username) => {
