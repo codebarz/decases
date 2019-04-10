@@ -50,7 +50,12 @@ const functions = {
             .catch(function (error) {
                 return error;
             });
-        return result;
+        if(result.length > 0) {
+            return result;
+        }
+        else {
+            return 'This user doesn\'t have any repo';
+        }
     },
     concatStrings: (a,b) => {
         if(!a || !b) {
