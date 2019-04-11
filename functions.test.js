@@ -63,17 +63,8 @@ describe('Check repos from git api', () => {
                 expect(response).toContain(('57'));
             })
     });
-    // test('Should return user repos', async () => {
-    //     const getFunc = await functions.getUserRepo('whitehox')
-    //         .then(response => {
-    //             expect(getFunc).toHaveBeenCalledWith("");
-    //         })
-    // });
-    // test('Should return an error if user doesn\'t have a repo', async () => {
-    //     await functions.getUserRepo('whiteho')
-    //         .then(response => {
-    //             expect(response).toBe('This user doesn\'t have any repo');
-    //         })
-    // });
+    test('Should return an error if there is no argument', () => {
+        expect(functions.getUserRepo()).toBe('Kindly enter a username');
+    });
 });
 
