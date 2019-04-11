@@ -1,5 +1,4 @@
 const functions = require('./functions');
-//const mockAxios = require('./__mocks__/repos');
 
 describe('Should check for addition of integers', () => {
     test('Add 6 to 4 should return 10', () => {
@@ -62,9 +61,6 @@ describe('Check repos from git api', () => {
             .then(response => {
                 expect(response).toContain(('57'));
             })
-    });
-    test('Should return an error if there is no argument', () => {
-        expect(functions.getUserRepo()).toBe('Kindly enter a username');
     });
 });
 
